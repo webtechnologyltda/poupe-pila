@@ -1,23 +1,24 @@
-## Dinero - Multi Account Money Tracker
-Dinero is a multi account money tracker. It is a simple application that allows you to track your money in multiple accounts and categories. It is written in PHP (Laravel Framework) and  Filament v3.
+## PoupePila - Multi Account Money Tracker
+PoupePila é um gerenciador financeiro de multiplas contas. É uma aplicação simples que permite acompanhar o seu dinheiro em várias contas e categorias. É escrito em PHP (Framework Laravel) e Filament v3.
 
 ## Features
-- Multi Account (Tenants)
-- Multi Currency
-- Wallets
-- Categories
-- Budgets
-- Goals
-- Debts
-- Transactions
-- Reports
+- Multiplas Contas (Enquilinos)
+- Multiplas Moedas
+- Carteiras
+- Categorias
+- Orçamentos
+- Metas
+- Débitos
+- Transações
+- Relatórios
 
-## Installation
-1. Clone the repository
-2. Run `composer install`
-3. Run `php artisan migrate --seed`
-4. Login with the following credentials:
-    - Email: `demo@dinero.app`
+## Instalação
+1. Clone o repositório
+2. Execute `composer install`
+3. Execute `npm i && npm run build` (ou run dev caso queira trabalhar com o layout)
+4. Run `php artisan migrate --seed`
+5. Login with the following credentials:
+    - Email: `admin@admin.com`
     - Password: `12345678`
 
 ## Screenshots
@@ -30,3 +31,6 @@ Dinero is a multi account money tracker. It is a simple application that allows 
 ![Transactions](screenshots/dinero-transactions.png)
 ![Accounts](screenshots/dinero-tenants.png)
 ![MyProfile](screenshots/dinero-my-profile.png)
+
+## Development Credits
+https://github.com/Shipu
