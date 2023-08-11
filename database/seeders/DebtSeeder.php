@@ -19,7 +19,7 @@ class DebtSeeder extends Seeder
         Debt::create([
             'type' => DebtTypeEnum::PAYABLE->value,
             'name' => fake()->name,
-            'description' => 'Borrowed money from John Doe for buying a new car',
+            'description' => 'Pediu dinheiro emprestado a John Doe para comprar um carro novo',
             'amount' => 800000,
             'start_at' => now()->addYears(2),
             'account_id' => Account::first()->id,
@@ -30,7 +30,7 @@ class DebtSeeder extends Seeder
         Debt::create([
             'type' => DebtTypeEnum::RECEIVABLE->value,
             'name' => fake()->name,
-            'description' => 'Received money from John Doe for buying a new phone',
+            'description' => 'Recebeu dinheiro de John Doe para comprar um novo telefone',
             'amount' => 100000,
             'start_at' => now()->addYears(2),
             'account_id' => Account::first()->id,

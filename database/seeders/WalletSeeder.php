@@ -18,27 +18,27 @@ class WalletSeeder extends Seeder
     {
         $wallets = [
             [
-                'name' => 'Cash',
+                'name' => 'Dinheiro',
                 'type' => WalletTypeEnum::GENERAL->value,
-                'currency_code' => 'BDT',
+                'currency_code' => 'BRL',
                 'color' => '#22b3e0',
             ],
             [
-                'name' => 'Bank',
+                'name' => 'Banco',
                 'type' => WalletTypeEnum::GENERAL->value,
-                'currency_code' => 'BDT',
+                'currency_code' => 'BRL',
                 'color' => '#224ce0'
             ],
             [
-                'name' => 'Mobile Wallet',
+                'name' => 'Carteira Digital',
                 'type' => WalletTypeEnum::GENERAL->value,
-                'currency_code' => 'BDT',
+                'currency_code' => 'BRL',
                 'color' => '#e07222'
             ],
             [
-                'name' => 'Credit Card',
+                'name' => 'Cartão de Crédito',
                 'type' => WalletTypeEnum::CREDIT_CARD->value,
-                'currency_code' => 'BDT',
+                'currency_code' => 'BRL',
                 'color' => '#22a1e0'
             ]
         ];

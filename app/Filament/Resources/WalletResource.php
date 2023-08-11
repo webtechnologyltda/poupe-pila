@@ -82,7 +82,7 @@ class WalletResource extends Resource
                             ->required()
                             ->searchable()
                             ->options(config('utilities.currencies'))
-                            ->default('BDT'),
+                            ->default('BRL'),
                         ColorPicker::make('color')
                             ->label(__('wallets.fields.color'))
                             ->required()
@@ -164,14 +164,14 @@ class WalletResource extends Resource
                 Tables\Actions\CreateAction::make(),
             ]);
     }
-    
+
     public static function getRelations(): array
     {
         return [
             RelationManagers\TransactionsRelationManager::class,
         ];
     }
-    
+
     public static function getPages(): array
     {
         return [
@@ -179,5 +179,9 @@ class WalletResource extends Resource
             'create' => Pages\CreateWallet::route('/create'),
             'edit' => Pages\EditWallet::route('/{record}/edit'),
         ];
+    }
+
+    public static function getModelLabel(): string {
+        return __('wallets.title_singular');
     }
 }

@@ -20,17 +20,17 @@ class AccountSeeder extends Seeder
         Account::insert([
             [
                 'id' => Ulid::generate(),
-                'name' => 'Personal',
+                'name' => 'Pessoal',
                 'owner_id' => $user->id,
             ],
             [
                 'id' => Ulid::generate(),
-                'name' => 'Business',
+                'name' => 'Negócio',
                 'owner_id' => $user->id,
             ],
             [
                 'id' => Ulid::generate(),
-                'name' => 'Family',
+                'name' => 'Familiar',
                 'owner_id' => $user->id,
             ]
         ]);

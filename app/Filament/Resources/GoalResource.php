@@ -58,7 +58,7 @@ class GoalResource extends Resource
                         Select::make('currency_code')
                             ->label(__('goals.fields.currency_code'))
                             ->options(config('utilities.currencies'))
-                            ->default('BDT'),
+                            ->default('BRL'),
                         ColorPicker::make('color')
                             ->label(__('goals.fields.color'))
                             ->default('#22b3e0'),
@@ -152,14 +152,14 @@ class GoalResource extends Resource
                 Tables\Actions\CreateAction::make(),
             ]);
     }
-    
+
     public static function getRelations(): array
     {
         return [
             TransactionsRelationManager::class,
         ];
     }
-    
+
     public static function getPages(): array
     {
         return [
@@ -167,5 +167,5 @@ class GoalResource extends Resource
             'create' => Pages\CreateGoal::route('/create'),
             'edit' => Pages\EditGoal::route('/{record}/edit'),
         ];
-    }    
+    }
 }

@@ -6,6 +6,7 @@ use App\Filament\Resources\TransactionResource;
 use Filament\Forms\Form;
 use Filament\Resources\RelationManagers\RelationManager;
 use Filament\Tables\Table;
+use Illuminate\Database\Eloquent\Model;
 
 class TransactionsRelationManager extends RelationManager
 {
@@ -20,4 +21,10 @@ class TransactionsRelationManager extends RelationManager
     {
         return (new TransactionResource())->table($table);
     }
+
+    public static function getTitle(Model $ownerRecord, string $pageClass): string
+    {
+        return trans('wallets.relations.walletTransactions.title');
+    }
+
 }
