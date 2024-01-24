@@ -202,12 +202,14 @@ class TransactionResource extends Resource
                     ])->columnSpan([
                         'sm' => 2
                     ]),
-                Forms\Components\Card::make()
+                Forms\Components\Section::make()
                     ->columnSpan(['lg' => 1])
                     ->schema([
                         TextInput::make('meta.memo.note')
+                            ->label(__('transactions.fields.note'))
                             ->columnSpan(2),
                         FileUpload::make('meta.memo.attachment')
+                            ->label(__('transactions.fields.attachment'))
                             ->columnSpan(2),
                     ]),
             ])->columns([
@@ -315,5 +317,9 @@ class TransactionResource extends Resource
             ->withoutGlobalScopes([
                 SoftDeletingScope::class,
             ]);
+    }
+
+    public static function getModelLabel(): string {
+        return __('transactions.title_singular');
     }
 }

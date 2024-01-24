@@ -8,12 +8,18 @@ use Filament\Tables\Actions\Action;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
 use Filament\Widgets\TableWidget;
+use Illuminate\Contracts\Support\Htmlable;
 
 class LatestTransaction extends TableWidget
 {
     protected int | string | array $columnSpan = 'full';
 
     protected static ?int $sort = 3;
+
+    protected function getTableHeading(): string | Htmlable | null
+    {
+        return __('transactions.latest_transaction');
+    }
 
     public function table(Table $table): Table
     {

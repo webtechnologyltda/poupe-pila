@@ -21,9 +21,13 @@ class CategoryChart extends ApexChartWidget
     /**
      * Widget Title
      *
-     * @var string|null
-     */
-    protected static ?string $heading = 'Top Category Transactions';
+     * @method getHeading
+     * @return string|null
+     * */
+    protected function getHeading(): ?string
+    {
+        return __('categories.top_category_transactions');
+    }
 
     protected static ?int $contentHeight = 300;
 

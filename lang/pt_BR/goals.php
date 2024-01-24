@@ -8,7 +8,7 @@ return [
     'title_singular' => 'Meta',
     'actions' => [
         'deposit' => 'Depósito',
-        'withdraw' => 'Retirada',
+        'withdraw' => 'Saque',
     ],
     'fields' => [
         'name' => 'Nome',

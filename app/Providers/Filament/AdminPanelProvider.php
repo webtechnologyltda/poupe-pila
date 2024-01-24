@@ -31,7 +31,7 @@ class AdminPanelProvider extends PanelProvider
             ->id('hub')
             ->login()
             ->colors([
-                'primary' => Color::Sky,
+                'primary' => Color::Amber,
             ])
             ->sidebarWidth('17rem')
             ->discoverResources(in: app_path('Filament/Resources'), for: 'App\\Filament\\Resources')

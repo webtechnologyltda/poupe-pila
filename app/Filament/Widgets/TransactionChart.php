@@ -22,9 +22,13 @@ class TransactionChart extends ApexChartWidget
     /**
      * Widget Title
      *
-     * @var string|null
-     */
-    protected static ?string $heading = 'Transactions';
+     * @method getHeading
+     * @return string|null
+     * */
+    protected function getHeading(): ?string
+    {
+        return __('transactions.title');
+    }
 
     /**
      * Chart options (series, labels, types, size, animations...)
@@ -63,11 +67,11 @@ class TransactionChart extends ApexChartWidget
             ],
             'series' => [
                 [
-                    'name' => 'Deposit',
+                    'name' => __('goals.actions.deposit'),
                     'data' => $transactions->pluck('deposit')->toArray()
                 ],
                 [
-                    'name' => 'Withdrawal',
+                    'name' => __('goals.actions.withdraw'),
                     'data' => $transactions->pluck('withdraw')->toArray()
                 ],
             ],

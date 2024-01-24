@@ -6,7 +6,8 @@ use App\Enums\VisibilityStatusEnum;
 
 return [
     'title' => 'Transações',
-    'title_singular' => 'Transação',
+    'title_singular' => 'Transações',
+    'latest_transaction' => 'Últimas Transações',
     'fields' => [
         'amount' => 'Valor',
         'confirmed' => 'Confirmado',
@@ -29,7 +30,7 @@ return [
         ],
         TransactionTypeEnum::WITHDRAW->value  => [
             'id' => TransactionTypeEnum::WITHDRAW->value,
-            'label' => 'Retirada',
+            'label' => 'Saque',
             'description' => 'Retirada da sua carteira',
         ],
         TransactionTypeEnum::TRANSFER->value  => [

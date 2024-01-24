@@ -5,6 +5,7 @@ use App\Enums\SpendTypeEnum;
 return [
     'title' => 'Categorias',
     'title_singular' => 'Categoria',
+    'top_category_transactions' => 'Top Transações por Categoria',
     'fields' => [
         'name' => 'Nome',
         'type' => 'Tipo',
